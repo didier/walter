@@ -1,0 +1,86 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": "eslint:recommended",
+  "plugins": ["svelte3"],
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.svelte"],
+      "processor": "svelte3/svelte3"
+    }
+  ],
+  "rules": {
+    "indent": ["error", "tab"],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "never"],
+    "brace-style": [
+      2,
+      "1tbs",
+      {
+        "allowSingleLine": true
+      }
+    ],
+    "camelcase": 2,
+    "comma-style": [2, "last"],
+    "curly": 2,
+    "eqeqeq": 2,
+    "func-names": 2,
+    "space-before-function-paren": ["error", "never"],
+    "guard-for-in": 2,
+    "wrap-iife": 2,
+    "no-undef": 2,
+    "new-cap": 2,
+    "no-trailing-spaces": 2,
+    "comma-dangle": 0,
+    "max-len": [
+      2,
+      {
+        "code": 120,
+        "tabWidth": 2,
+        "ignoreComments": true,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "no-underscore-dangle": 0,
+    "strict": 0,
+    "no-shadow": 0,
+    "no-var": 2,
+    "no-useless-rename": 2,
+    "no-new-object": 2,
+    "no-array-constructor": 2,
+    "no-unused-vars": 1,
+    "global-require": 0,
+    "prefer-spread": 1,
+    "prefer-arrow-callback": 2,
+    "prefer-const": 1,
+    "import/prefer-default-export": 0,
+    "import/no-unresolved": 0,
+    "no-console": [
+      1,
+      {
+        "allow": ["warn", "error"]
+      }
+    ],
+    "no-extend-native": 2,
+    "function-paren-newline": [2, "multiline"],
+    "object-curly-newline": [
+      "error",
+      {
+        "multiline": true,
+        "minProperties": 3,
+        "consistent": true
+      }
+    ],
+    "no-nested-ternary": 0,
+    "no-use-before-define": 0
+  }
+}
