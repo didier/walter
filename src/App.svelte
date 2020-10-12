@@ -1,13 +1,27 @@
 <script>
   import Logo from './components/atoms/Logo.svelte'
   import { tap } from '@sveltejs/gestures'
+  import { onMount } from 'svelte'
+
   let current = 0
   let total = 8
+
+  function initializeLocalStorage() {
+    localStorage.setItem('current', current)
+    localStorage.setItem('total', total)
+  }
+
+  onMount(() => {
+    initializeLocalStorage()
+    current = parseInt(localStorage.getItem('current'))
+    total = parseInt(localStorage.getItem('total'))
+  })
 
   const drinkWater = () => {
     if (current < total) {
       current = current + 1
     }
+    initializeLocalStorage()
   }
 </script>
 
